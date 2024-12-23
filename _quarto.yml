@@ -1,0 +1,79 @@
+# This file controls the settings for your Quarto template from www.marvinschmitt.com
+
+# website settings
+website:
+  title: "Lilly Speier"                              
+  description: "Biomedical Engineering PhD Student- Hubert Lab"   
+  image: images/global_selfie.jpg
+  
+  favicon: images/case-western-reserve-university-logo-png_seeklogo-520624.png
+  
+  # start of the navigation bar at the top of the website
+  navbar:
+    pinned: true
+    logo: /images/case-western-reserve-university-logo-png_seeklogo-520624.png
+    
+    # your sub-pages
+    left:
+      - text: "About Me"
+        href: About_Me/index_about_me.qmd
+      - text: "Education"
+        href: Education/index_education.qmd
+      - text: "Projects"
+        href: Projects/index_projects.qmd
+      - text: "CV"
+        href: CV/index_CV.qmd
+      - text: "Blog"
+        href: blog/index_blog.qmd
+      - text: "BMI & Blood Dashboard"
+        href: dashboard/dashboard-431.qmd
+    
+    # your social media handles
+    right:
+      - icon: github
+        href: https://www.github.com/lillyspeier/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/lillyspeier/
+      - icon: instagram
+        href: https://instagram.com/lillyspeier/
+      - icon: envelope
+        aria-label: email
+        href: "mailto:lxs850@case.edu"  
+
+# Don't touch unless you know what you are doing :) ------------
+  search: 
+    location: navbar
+    type: textbox
+  page-footer: 
+    left: |
+      <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
+    center: |
+      <span class="faux-block"><a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">View the tutorial for this template!</a></span>
+    right: |
+      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View source on GitHub</a></span>
+
+project:
+  type: website
+  output-dir: docs
+
+  preview: 
+    port: 22222
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+execute:
+  freeze: true
+
+format:
+  html:
+    fontsize: 1.1em
+    theme: 
+      - pulse
+      - html/styles.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
