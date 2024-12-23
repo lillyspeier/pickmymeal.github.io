@@ -1,44 +1,25 @@
-# This file controls the settings for your Quarto template from www.marvinschmitt.com
-
 # website settings
 website:
-  title: "Lilly Speier"                              
-  description: "Biomedical Engineering PhD Student- Hubert Lab"   
-  image: images/global_selfie.jpg
+  title: "Pick My Meal"                              
+  description: "text"   
+  image: images/menu.png
   
-  favicon: images/case-western-reserve-university-logo-png_seeklogo-520624.png
+  favicon: images/menu.png
   
   # start of the navigation bar at the top of the website
   navbar:
     pinned: true
-    logo: /images/case-western-reserve-university-logo-png_seeklogo-520624.png
+    logo: /images/menu.png
     
     # your sub-pages
     left:
-      - text: "About Me"
-        href: About_Me/index_about_me.qmd
-      - text: "Education"
-        href: Education/index_education.qmd
-      - text: "Projects"
-        href: Projects/index_projects.qmd
-      - text: "CV"
-        href: CV/index_CV.qmd
-      - text: "Blog"
-        href: blog/index_blog.qmd
-      - text: "BMI & Blood Dashboard"
-        href: dashboard/dashboard-431.qmd
+      - text: "Pick My Meal"
+        href: dashboard/dashboard.qmd
     
     # your social media handles
     right:
       - icon: github
         href: https://www.github.com/lillyspeier/
-      - icon: linkedin
-        href: https://www.linkedin.com/in/lillyspeier/
-      - icon: instagram
-        href: https://instagram.com/lillyspeier/
-      - icon: envelope
-        aria-label: email
-        href: "mailto:lxs850@case.edu"  
 
 # Don't touch unless you know what you are doing :) ------------
   search: 

@@ -1,26 +1,27 @@
 ---
 title: "pickmyfood-dashboard"
-format: html
-editor: visual
+format: dashboard
+logo: images/menu
 ---
 
-## Quarto
+```{r, message=FALSE}
+library(readxl)
+library(dplyr)
+library(tidyverse)
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
 ```
 
-You can add options to executable code like this
+
 
 ```{r}
-#| echo: false
-2 * 2
+ingredients <- read_xlsx("data/Ingredients.xlsx", skip = 1)
+nutrient.values <- read_xlsx("data/Nutrient_Values.xlsx", skip = 1)
+food.beverages <- read_xlsx("data/Foods_Beverages.xlsx", skip = 1)
+portions.weights <- read_xlsx("data/Portions_Weights.xlsx", skip = 1)
+
+combine1 <- left_join(ingredients, nutrient.values, by = "Food code")
+#combine2 <- left_join(combine1, food.beverages, by = "Food code")
+#data <- left_join(combine2, portions.weights, by = "Food code")
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+
