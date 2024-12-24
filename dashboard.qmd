@@ -19,9 +19,12 @@ nutrient.values <- read_xlsx("data/Nutrient_Values.xlsx", skip = 1)
 food.beverages <- read_xlsx("data/Foods_Beverages.xlsx", skip = 1)
 portions.weights <- read_xlsx("data/Portions_Weights.xlsx", skip = 1)
 
-combine1 <- left_join(ingredients, nutrient.values, by = "Food code")
-#combine2 <- left_join(combine1, food.beverages, by = "Food code")
-#data <- left_join(combine2, portions.weights, by = "Food code")
+combine1 <- left_join(ingredients, nutrient.values, by = c("Food code", "WWEIA Category number", "Main food description", "WWEIA Category description"))
+combine2 <- left_join(combine1, food.beverages, by = c("Food code", "WWEIA Category number", "Main food description", "WWEIA Category description"))
+
+data <- left_join(combine2, portions.weights, by = c("Food code", "WWEIA Category number", "Main food description", "WWEIA Category description", "Seq num"))
+
+
 ```
 
 
